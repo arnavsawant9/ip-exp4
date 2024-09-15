@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom T-shirt Order Form</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+      <marquee>
+        <p>Get discounts upto 50% on your next purchase by downloading and making purchase by our app</p>
+      </marquee>
+      <h1>Customize the T-shirt in your own way!!</h1>
+      <fieldset>
+      <fieldset>
+        <legend>Details</legend>
+        <form id="orderForm" onsubmit="showSuccessMessage(event)">
+      
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile_number">Mobile Number:</label>
+            <input type="tel" id="mobile_number" name="mobile_number" max="10" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>T-Shirt Details</legend>
+            <label for="size">T-shirt Size:</label>
+            <select id="size" name="size" required>
+                <option value="">Select size</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+
+            <label for="color">T-shirt Color:</label>
+            <input type="color" id="color" name="color" value="#000000">
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+
+            <label for="customText">Custom Text:</label>
+            <textarea id="customText" name="customText" ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Order</legend>
+            <button type="submit">Place Order</button>
+          </fieldset>
+        </form>
+      </fieldset>
+        <p id="successMessage" class="success-message hidden"></p>
+    </div>
+
+</body>
+</html>
